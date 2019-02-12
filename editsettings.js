@@ -4,7 +4,7 @@ const fs = require('fs');
 var util = require('util')
 
 var password = bcrypt.hashSync(process.argv[3], 8);
-var username = process.argv[3];
+var username = process.argv[2];
 
 
 settings.adminAuth = {
@@ -17,4 +17,7 @@ settings.adminAuth = {
 }
 
 
-fs.writeFile('/app/.node-red/settings.js', "module.exports = " + util.inspect(settings, {showHidden: false, depth: null}), 'utf-8');
+fs.writeFile('/app/.node-red/settings.js', "module.exports = " + util.inspect(settings, {showHidden: false, depth: null}), (err) => { 
+	if (err) throw err;
+	console.log("Settings Updated";
+});
