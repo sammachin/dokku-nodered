@@ -1,4 +1,4 @@
-var settings = require('./settings.js');
+var settings = require('/app/.node-red/settings.js');
 var bcrypt = require('bcryptjs');
 const fs = require('fs');
 var util = require('util')
@@ -17,4 +17,4 @@ settings.adminAuth = {
 }
 
 
-fs.writeFile('./settings.js', "module.exports = " + util.inspect(settings, {showHidden: false, depth: null}), 'utf-8');
+fs.writeFile('/app/.node-red/settings.js', "module.exports = " + util.inspect(settings, {showHidden: false, depth: null}), 'utf-8');
