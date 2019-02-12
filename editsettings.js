@@ -19,5 +19,5 @@ settings.adminAuth = {
 
 fs.writeFile('/app/.node-red/settings.js', "module.exports = " + util.inspect(settings, {showHidden: false, depth: null}), (err) => { 
 	if (err) throw err;
-	console.log("Settings Updated";
+	console.log("Settings Updated");
 });
