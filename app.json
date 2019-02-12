@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dokku": {
-      "predeploy": "npm install"
+      "predeploy": "npm install",
+      "postdeploy" : "node editsettings.js admin password"
     }
   }
 }
