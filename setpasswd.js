@@ -1,9 +1,4 @@
 
-
-var exec = require('child_process').exec;
-var child = exec('node-red');
-setTimeout(function(){ child.kill(); }, 5000);
-
 var settings = require('/app/.node-red/settings.js');
 var bcrypt = require('bcryptjs');
 const fs = require('fs');
