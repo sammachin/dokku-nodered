@@ -19,7 +19,7 @@ git push $appname master
 echo "Deployed"
 
 echo "Setting up TLS"
-dokku config:set --no-restart $appname DOKKU_LETSENCRYPT_EMAIL=devrel@nexmo.com
+dokku config:set --no-restart $appname DOKKU_LETSENCRYPT_EMAIL=$email
 dokku letsencrypt $appname
 echo "TLS Enabled"
 
