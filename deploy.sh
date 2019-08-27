@@ -1,5 +1,7 @@
 #! /bin/bash
 
+hostname='nodered.example.com'
+email='admin@example.com'
 appname=$1
 user=$2
 pass=`node pass.js`
@@ -12,7 +14,7 @@ then
 fi
 echo "Deploying $appname"
 dokku apps:create $appname
-git remote add $appname dokku@nodered.nexmodev.com:$appname
+git remote add $appname dokku@$hostname:$appname
 git push $appname master
 echo "Deployed"
 
