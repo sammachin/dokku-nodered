@@ -26,4 +26,7 @@ dokku enter $appname web node ./setpasswd.js $user $pass
 echo "Restarting Node-RED"
 dokku enter $appname web pkill node-red
 
-echo READY `dokku url $appname` $user $pass 
+echo READY 
+echo URL: `dokku url $appname` 
+echo Username: $user
+echo Password: $pass 
