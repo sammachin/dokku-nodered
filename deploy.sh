@@ -1,11 +1,11 @@
 #! /bin/bash
   
-hostname='one.example.com'
-domain='example.com'
+hostname='one.workbench.red'
+domain='workbench.red'
 appname=$1
 user=$2
 pass=`xkcdpass -n 4 -d ''  -C capitalize`
-aws_r53_zone='ABC123'
+aws_r53_zone='Z3LYIJDM6IDEPH'
 
 echo "Checking for Existing App"
 if host ${appname}.${domain} | grep "${domain} has address"
@@ -15,6 +15,7 @@ then
 fi
 
 echo "Setting up DNS"
+action=CREATE
 eval "cat <<EOF
 $(<./dns.template)
 EOF
