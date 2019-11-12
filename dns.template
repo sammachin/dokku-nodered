@@ -1,7 +1,7 @@
 {
   "Changes": [
     {
-      "Action": "CREATE",
+      "Action": "${action}",
       "ResourceRecordSet": {
         "Name": "${appname}.example.com",
         "Type": "CNAME",
