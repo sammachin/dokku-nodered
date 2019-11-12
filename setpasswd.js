@@ -1,5 +1,5 @@
 
-var settings = require('/app/.node-red/settings.js');
+var settings = require('/userDir/settings.js');
 var bcrypt = require('bcryptjs');
 const fs = require('fs');
 var util = require('util')
@@ -18,7 +18,7 @@ settings.adminAuth = {
 }
 
 
-fs.writeFile('/app/.node-red/settings.js', "module.exports = " + util.inspect(settings, {showHidden: false, depth: null}), (err) => { 
+fs.writeFile('/userDir/settings.js', "module.exports = " + util.inspect(settings, {showHidden: false, depth: null}), (err) => { 
 	if (err) throw err;
 	console.log("Settings Updated");
 });
