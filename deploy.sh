@@ -4,7 +4,7 @@ hostname='one.example.com'
 domain='example.com'
 appname=$1
 user=$2
-pass=`xkcdpass -n 4 -d ''`
+pass=`xkcdpass -n 4 -d ''  -C capitalize`
 aws_r53_zone='ABC123'
 
 echo "Checking for Existing App"
